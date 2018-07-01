@@ -13,12 +13,7 @@ eureka:
     #默认30s
     lease-renewal-interval-in-seconds: 5
     ip-address: 120.79.185.25
-  client:
-    service-url:
-      defaultZone: http://120.79.95.51:55556/eureka,http://120.79.185.25:55557/eureka
 spring:
-  application:
-    name: zuul
   cloud:
     bus:
       trace:
