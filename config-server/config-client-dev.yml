@@ -1,6 +1,0 @@
-﻿server:
-  port: 55578
-test: 测试数据
-spring:
-  application:
-    name: config-client

@@ -1,0 +1,30 @@
+server:
+  port: 55559
+spring:
+  application:
+    name: goods-service
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 120.79.95.51
+    port: 5672
+    username: rabbitmq
+    password: 123456
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+    hostname: ${eureka.instance.ip-address}
+    #服务过期时间配置,超过这个时间没有接收到心跳EurekaServer就会将这个实例剔除
+    #注意，EurekaServer一定要设置eureka.server.eviction-interval-timer-in-ms否则这个配置无效，这个配置一般为服务刷新时间配置的三倍
+    #默认90s
+    lease-expiration-duration-in-seconds: 15
+    #服务刷新时间配置，每隔这个时间会主动心跳一次
+    #默认30s
+    lease-renewal-interval-in-seconds: 5
+    ip-address: 120.79.95.51
+  client:
+    service-url:
+      defaultZone: http://120.79.95.51:55555/eureka,http://120.79.185.25:55555/eureka
