@@ -9,5 +9,5 @@ spring:
     username: rabbitmq
     password: 123456
 goods:
-  name: 测试
-  id: 1
+  name: 测试204
+  id: 204
