@@ -8,6 +8,16 @@ spring:
     port: 5672
     username: rabbitmq
     password: 123456
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+    base-url: http://192.168.0.201:55559/
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
 goods:
   name: 测试204
   id: 204
