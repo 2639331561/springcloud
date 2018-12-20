@@ -76,4 +76,4 @@ tm:
 #######################################LCN-end#################################################
 logging:
   level:
-    com.codingapi=debug
+    com.codingapi: debug
