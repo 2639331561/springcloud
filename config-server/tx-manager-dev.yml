@@ -1,19 +1,28 @@
 server:
   #服务端口
-  port: 7000
+  port: 55560
 spring:
   mvc:
     static-path-pattern: /**
   resources:
     static-locations: classpath:/static/
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 120.79.95.51
+    port: 5672
+    username: rabbitmq
+    password: 123456
 #######################################txmanager-end#################################################
 
 #######################################redis-start#################################################
 #redis 配置文件，根据情况选择集群或者单机模式
 ##redis cluster
-  redis:
-    cluster:
-      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+#  redis:
+#    cluster:
+#      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
 #redis
     host: 192.168.0.202
     port: 50001
@@ -45,7 +54,7 @@ tm:
 #socket server Socket对外服务端口
 #TxManager的LCN协议的端口
   socket:
-    port: 9999
+    port: 55561
 #最大socket连接数
 #TxManager最大允许的建立连接数量
     maxconnection: 500
