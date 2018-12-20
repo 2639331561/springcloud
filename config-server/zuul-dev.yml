@@ -13,7 +13,7 @@ spring:
 zuul:
   routes:
     api-member:
-      path: /membe/**
+      path: /member/**
       serviceId: member-service
     api-goods:
       path: /goods/**
