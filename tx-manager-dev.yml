@@ -24,6 +24,7 @@ spring:
 #    cluster:
 #      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
 #redis
+  redis:
     host: 192.168.0.202
     port: 50001
     database: 0
