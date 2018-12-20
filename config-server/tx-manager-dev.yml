@@ -55,6 +55,7 @@ tm:
 #socket server Socket对外服务端口
 #TxManager的LCN协议的端口
   socket:
+    address: ${eureka.instance.ip-address}
     port: 55561
 #最大socket连接数
 #TxManager最大允许的建立连接数量
