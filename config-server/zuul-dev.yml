@@ -12,11 +12,11 @@ spring:
     password: 123456
 zuul:
   routes:
-    memberService:
-      path: /memberService/**
+    api-member:
+      path: /membe/**
       serviceId: member-service
-    goodsService:
-      path: /goodsService/**
+    api-goods:
+      path: /goods/**
       serviceId: goods-service
   prefix: /api
   host:
