@@ -14,10 +14,10 @@ zuul:
   routes:
     api-member:
       path: /member/**
-      serviceId: member-service
+      serviceId: member
     api-goods:
       path: /goods/**
-      serviceId: goods-service
+      serviceId: goods
   prefix: /api
   host:
     connect-timeout-millis: 10000

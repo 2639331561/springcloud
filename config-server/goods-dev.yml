@@ -1,5 +1,5 @@
 server:
-  port: 44444
+  port: 44445
 spring:
   cloud:
     bus:
@@ -54,7 +54,7 @@ spring:
         max-idle: 50
         min-idle: 2
 mybatis:
-  type-aliases-package: com.project.member.bean
+  type-aliases-package: com.project.clouddemo.goods.bean
   config-location: classpath:mybatisConfig.xml
   mapper-locations: classpath*:mapper/*.xml
 lcn:
