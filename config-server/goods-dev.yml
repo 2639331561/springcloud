@@ -88,4 +88,9 @@ feign:
 # 日志支持
 logging:
   level:
-    project.user.UserClient: DEBUG
+    com:
+      project:
+        clouddemo:
+          member:
+            api:
+              MemberAPI: DEBUG
