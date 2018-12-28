@@ -76,7 +76,7 @@ ribbon:
   ConnectTimeout: 3000
 feign:
   hystrix:
-    enabled: false
+    enabled: true
 #请求和响应GZIP压缩支持
   compression:
     request:
