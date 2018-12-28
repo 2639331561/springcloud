@@ -1,5 +1,5 @@
 server:
-  port: 55560
+  port: 55556
 spring:
   rabbitmq:
     host: 120.79.95.51
