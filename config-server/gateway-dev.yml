@@ -1,5 +1,5 @@
 server:
-  port: 55556
+  port: 55560
 spring:
   cloud:
     bus:
