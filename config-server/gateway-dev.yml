@@ -1,23 +1,23 @@
 server:
   port: 55560
 spring:
-  cloud:
-    bus:
-      trace:
-        enabled: true
   rabbitmq:
     host: 120.79.95.51
     port: 5672
     username: rabbitmq
     password: 123456
-  gateway:
-    routes:
-    - id: api-member
-      uri: lb://member
-      predicates:
-      - Path=/member/**
-    - id: api-goods
-      uri: lb://goods
-      predicates:
-      - Path=/goods/**
+  cloud:
+    bus:
+      trace:
+        enabled: true
+    gateway:
+      routes:
+      - id: api-member
+        uri: lb://member
+        predicates:
+        - Path=/member/**
+      - id: api-goods
+        uri: lb://goods
+        predicates:
+        - Path=/goods/**
     
