@@ -10,18 +10,10 @@ spring:
     bus:
       trace:
         enabled: true
-    gateway:
-      routes:
-      - id: api-member
-        uri: lb://member
-        predicates:
-        - Path=/member/**
-        filters:
-        - StripPrefix= 1
-      - id: api-goods
-        uri: lb://goods
-        predicates:
-        - Path=/goods/**
-        filters:
-        - StripPrefix= 1
-    
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
