@@ -56,7 +56,9 @@ spring:
 mybatis:
   type-aliases-package: com.project.clouddemo.member.bean
   config-location: classpath:mybatisConfig.xml
-  mapper-locations: classpath*:mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 lcn:
   manager:
     url: http://192.168.0.201:55560/tx/manager/

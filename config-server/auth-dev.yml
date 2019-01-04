@@ -56,7 +56,7 @@ spring:
 mybatis:
   type-aliases-package: com.project.clouddemo.auth.bean
   config-location: classpath:mybatisConfig.xml
-  mapper-locations: classpath*:mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
 #hystrix的超时时间
