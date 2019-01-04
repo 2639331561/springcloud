@@ -14,7 +14,7 @@ spring:
     locator:
       discovery:
         enabled: true
-    base-url: http://192.168.0.201:55559/
+    base-url: http://127.0.0.1:55559/
     sender:
       type: web
   sleuth:
@@ -24,9 +24,9 @@ spring:
       skipPattern: (^cleanup.*)
   datasource:
     druid:
-      url: jdbc:mysql://192.168.0.202:40036/test?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
+      url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
       username: root
-      password: 3396Zmr3Wj0VoflC
+      password: 123456
       driver-class-name: com.mysql.cj.jdbc.Driver
       initial-size: 5
       min-idle: 10
@@ -43,9 +43,9 @@ spring:
       use-global-data-source-stat: true
       validation-query: SELECT 1
   redis:
-    host: 192.168.0.201
-    password: 5F*hDgVA$il0F$5G
-    port: 50001
+    host: 47.101.151.125
+    password: 123456
+    port: 6379
     database: 0
     timeout: 5000
     jedis:
