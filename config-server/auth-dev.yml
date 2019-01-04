@@ -1,0 +1,93 @@
+server:
+  port: 44443
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 120.79.95.51
+    port: 5672
+    username: rabbitmq
+    password: 123456
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+    base-url: http://192.168.0.201:55559/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      percentage: 1.0
+    web:
+      skipPattern: (^cleanup.*)
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.0.202:40036/test?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 3396Zmr3Wj0VoflC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 5
+      min-idle: 10
+      max-active: 2000
+      max-wait: 10000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      use-global-data-source-stat: true
+      validation-query: SELECT 1
+  redis:
+    host: 192.168.0.201
+    password: 5F*hDgVA$il0F$5G
+    port: 50001
+    database: 0
+    timeout: 5000
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 50
+        min-idle: 2
+mybatis:
+  type-aliases-package: com.project.clouddemo.auth.bean
+  config-location: classpath:mybatisConfig.xml
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#hystrix的超时时间
+hystrix:
+  command:
+      default:
+          execution:
+            isolation:
+              thread:
+                timeoutInMilliseconds: 5000
+#ribbon的超时时间
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+feign:
+  hystrix:
+    enabled: true
+#请求和响应GZIP压缩支持
+  compression:
+    request:
+      enabled: true
+      mime-types: text/xml,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+# 日志支持
+logging:
+  level:
+    com:
+      project:
+        clouddemo:
+          member:
+            api:
+              MemberAPI: DEBUG
