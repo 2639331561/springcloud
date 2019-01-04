@@ -55,10 +55,15 @@ spring:
         min-idle: 2
 mybatis:
   type-aliases-package: com.project.clouddemo.member.bean
-  config-location: classpath:mybatisConfig.xml
   mapper-locations: classpath:mapper/*.xml
   configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
+pagehelper:
+  offset-as-page-num: false
+  row-bounds-with-count: true
+  reasonable: true
+  params: pageNum=page;pageSize=limit;
 lcn:
   manager:
     url: http://127.0.0.1:55560/tx/manager/
