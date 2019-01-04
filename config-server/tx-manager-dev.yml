@@ -25,10 +25,10 @@ spring:
 #      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
 #redis
   redis:
-    host: 192.168.0.202
-    port: 50001
+    host: 47.101.151.125
+    port: 6379
     database: 0
-    password: 5F*hDgVA$il0F$5G
+    password: 123456
     timeout: 1s
     jedis:
       pool:
