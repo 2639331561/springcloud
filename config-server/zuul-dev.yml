@@ -18,7 +18,6 @@ zuul:
     api-goods:
       path: /goods/**
       serviceId: goods
-  prefix: /api
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 10000
