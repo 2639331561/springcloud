@@ -24,7 +24,7 @@ spring:
       skipPattern: (^cleanup.*)
   datasource:
     druid:
-      url: jdbc:mysql://192.168.0.202:test/gateway?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
+      url: jdbc:mysql://192.168.0.202:40036/test?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
       username: root
       password: 3396Zmr3Wj0VoflC
       driver-class-name: com.mysql.cj.jdbc.Driver
