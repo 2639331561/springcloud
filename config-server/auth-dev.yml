@@ -54,16 +54,11 @@ spring:
         max-idle: 50
         min-idle: 2
 mybatis:
-  type-aliases-package: com.project.clouddemo.auth.bean
+  type-aliases-package: com.fanglin.clouddemo.auth.bean
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
-pagehelper:
-  offset-as-page-num: false
-  row-bounds-with-count: true
-  reasonable: true
-  params: pageNum=page;pageSize=limit;
 #hystrix的超时时间
 hystrix:
   command:

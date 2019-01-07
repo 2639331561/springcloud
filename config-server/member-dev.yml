@@ -14,7 +14,7 @@ spring:
     locator:
       discovery:
         enabled: true
-    base-url: http://127.0.0.1:55559/
+    base-url: http://192.168.0.201:55559/
     sender:
       type: web
   sleuth:
@@ -43,10 +43,10 @@ spring:
       use-global-data-source-stat: true
       validation-query: SELECT 1
   redis:
-    host: 47.101.151.125
-    password: 123456
-    port: 6379
+    host: 192.168.0.202
+    port: 50001
     database: 0
+    password: 5F*hDgVA$il0F$5G
     timeout: 5000
     jedis:
       pool:
@@ -54,7 +54,7 @@ spring:
         max-idle: 50
         min-idle: 2
 mybatis:
-  type-aliases-package: com.project.clouddemo.member.bean
+  type-aliases-package: com.fanglin.clouddemo.member.bean
   mapper-locations: classpath:mapper/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -66,7 +66,7 @@ pagehelper:
   params: pageNum=page;pageSize=limit;
 lcn:
   manager:
-    url: http://127.0.0.1:55560/tx/manager/
+    url: http://192.168.0.201:55560/tx/manager/
 #hystrix的超时时间
 hystrix:
   command:
