@@ -43,7 +43,7 @@ spring:
       use-global-data-source-stat: true
       validation-query: SELECT 1
   redis:
-     host: 192.168.0.202
+    host: 192.168.0.202
     port: 50001
     database: 0
     password: 5F*hDgVA$il0F$5G
