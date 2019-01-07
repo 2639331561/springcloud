@@ -25,15 +25,15 @@ spring:
 #      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
 #redis
   redis:
-    host: 47.101.151.125
-    port: 6379
+    host: 192.168.0.202
+    port: 50001
     database: 0
-    password: 123456
+    password: 5F*hDgVA$il0F$5G
     timeout: 1s
     jedis:
       pool:
         max-wait: -1
-        max-active: 100
+        max-active: 1000
         max-idle: 10
         min-idle: 5
 #####################################redis-end###################################################
@@ -55,7 +55,7 @@ tm:
 #socket server Socket对外服务端口
 #TxManager的LCN协议的端口
   socket:
-    address: ${eureka.instance.ip-address}
+    address: ${spring.cloud.consul.discovery.ip-address}
     port: 55561
 #最大socket连接数
 #TxManager最大允许的建立连接数量

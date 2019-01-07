@@ -24,9 +24,9 @@ spring:
       skipPattern: (^cleanup.*)
   datasource:
     druid:
-      url: jdbc:mysql://127.0.0.1:3306/test?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
+      url: jdbc:mysql://192.168.0.202:40036/test?useSSL=false&serverTimezone=CTT&characterEncoding=UTF-8&autoReconnect=true
       username: root
-      password: 123456
+      password: 3396Zmr3Wj0VoflC
       driver-class-name: com.mysql.cj.jdbc.Driver
       initial-size: 5
       min-idle: 10
@@ -43,14 +43,14 @@ spring:
       use-global-data-source-stat: true
       validation-query: SELECT 1
   redis:
-    host: 47.101.151.125
-    password: 123456
-    port: 6379
+     host: 192.168.0.202
+    port: 50001
     database: 0
+    password: 5F*hDgVA$il0F$5G
     timeout: 5000
     jedis:
       pool:
-        max-active: 100
+        max-active: 1000
         max-idle: 50
         min-idle: 2
 mybatis:
