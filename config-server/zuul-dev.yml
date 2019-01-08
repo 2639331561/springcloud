@@ -11,13 +11,6 @@ spring:
     username: rabbitmq
     password: 123456
 zuul:
-  routes:
-    api-member:
-      path: /member/**
-      serviceId: member
-    api-goods:
-      path: /goods/**
-      serviceId: goods
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 10000
